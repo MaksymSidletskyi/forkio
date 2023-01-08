@@ -1,6 +1,10 @@
 @import './variables.scss';
 @import './reset.scss';
 
+.container {
+    padding: 0 10px;
+}
+
 .header {
     position: relative;
     width: 100%;
@@ -10,10 +14,9 @@
     display: flex;
     flex-direction: flex-start;
     justify-content: center;
-    align-items: column;
     background: url(../img/images/header-image.png);
     background-repeat: no-repeat;
-    background-position: 50% 0;
+    background-size: cover;
 
     &__logo-wrapper {
         position: absolute;
@@ -107,3 +110,6 @@
     }
   }
   
+  .header__logo-wrapper:hover img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(232deg) brightness(107%) contrast(101%);
+  }
