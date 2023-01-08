@@ -1,145 +1,111 @@
 @import './variables.scss';
 
-
-.container {
-   padding: 10px;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.bg-wrapper {
-    background-image: url(../img/images/header-image.png);
-    background-position: center;
+.header {
+    position: relative;
     width: 100%;
-    background-size: cover;
-    height: 825px;
-}
-
-.header__wrapper {
-    width: 1020px;
-    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 580px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: flex-start;
+    justify-content: center;
+    align-items: column;
+    background: url(../img/images/header-image.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
 
-
-
-    @media (min-width: 1200px) {
-        margin: 0 auto;
-    }
-
-    &-named {
-        display: flex;
-        
-    }
-
-    &-logo {
-        padding: 30px 15px;
-        
-    }
-
-    &-logo:hover {
-        content: url(../img/images/logo-hover.png);
-    }
-
-    &-title {
-        color: $main-text-color;
-        font-size: $fs-m;
-        text-transform: uppercase;
+    &__logo-wrapper {
+        position: absolute;
+        top: 29.5px;
+        left: 90px;
         display: flex;
         align-items: center;
-        font-style: Lato;
-        font-weight: 700;
-    }
-
-    &-title:hover {
-        color: $main-second-text-color;
-    }
-
-    &-button {
-        background-color: $main-text-color;
-        border-radius: 30px;
-        
-        &-text {
-            color: $main-second-text-color;
-            font-size: $fs-xs;
-            padding: 0 15px;
-        }
-
-    }
-
-    &-button:hover {
-        background-color: $main-second-text-color;
-
-        .header__wrapper-button-text {
-            color: $main-text-color;
-        }
-    }
-}
-
-.navbar {
-   display: flex;
-
-    &-wrap {
-        display: flex;
-    }
-
-    &-link {
         text-decoration: none;
-        font-size: $fs-xs;
-        color: $main-text-color;
-        margin-right: 48px;
-    }
 
-    &-link:hover {
-        color: $main-second-text-color;
-    }
-
-
-}
-
-
-
-.header__fork {
-text-align: center;
-
-    &-title {
-        color: $main-second-text-color;
-        font-size: $fs-xxxl;
-    }
-
-    &-text {
-        font-size: $fs-l;
-        color: $main-text-color;
-    }
-
-    &-description {
-        font-size: $fs-xs;
-        color: $description-text-color;
-    }
-
-    &-button {
-        background-color: $main-text-color;
-        border-radius: 40px;
-        position: relative;
-        top: 38px;
-        margin-top: 350px;
-        border: none;
-
-
-
-        &-text {
-            font-size: $fs-s;
-            color: $main-second-text-color;
-            padding: 0 20px;
-        }
-
-
-    }
-
-    &-button:hover {
-        background-color: $main-second-text-color;
-
-        .header__fork-button-text {
+        .logo-text {
+            margin: 0 0 8px 17px;
+            font-size: $fs-m;
+            line-height: 16px;
+            text-transform: uppercase;
             color: $main-text-color;
         }
+
     }
-}
+    .buy-button {
+        position: absolute;
+        width: 145px;
+        padding: 10px 20px;
+        top: 31px;
+        right: 90px;
+        font-size: $fs-xs;
+        line-height: 17px;
+        border-radius: 40px;
+        color: $main-second-text-color;
+        background-color: $main-text-color;
+
+        &:hover {
+            background-color: $main-second-text-color;
+            color: $main-text-color;
+            border: 1px solid $main-text-color;
+        }
+    }
+
+    .nav {
+        width: 100%;
+        padding: 40px 283px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .nav__list {
+            width: 527px;
+            padding: 3px 10px 3px 0;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &-link {
+                text-decoration: none;
+                font-size: $fs-xs;
+                color: $main-text-color;
+
+                &:hover {
+                    color: $main-second-text-color;
+                }
+            }
+        }
+
+    }
+
+    .download {
+      position: absolute;
+      left: 50%;
+      top: 800px;
+      transform: translate(-50%, -32px);
+              display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      &-button {
+        width: 390px;
+        padding: 20px 0;
+  
+        border-radius: 62px;
+        &:hover {
+  
+        }
+      }
+      &__info {
+        margin-top: 19px;
+ 
+      }
+    }
+  }
+  
