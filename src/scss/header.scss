@@ -1,10 +1,5 @@
 @import './variables.scss';
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+@import './reset.scss';
 
 .header {
     position: relative;
@@ -63,7 +58,7 @@
         justify-content: flex-end;
         align-items: center;
 
-        .nav__list {
+        &__list {
             width: 527px;
             padding: 3px 10px 3px 0;
 
@@ -86,24 +81,27 @@
 
     .download {
       position: absolute;
-      left: 50%;
-      top: 800px;
+      left: 600px;
+      top: 685px;
       transform: translate(-50%, -32px);
-              display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-      &-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+
+      &__button {
         width: 390px;
         padding: 20px 0;
-  
-        border-radius: 62px;
-        &:hover {
-  
-        }
+        border-radius: 40px;
+        background-color: $main-text-color;
+        color: $main-second-text-color;
+        font-size: $fs-s;
+        font-weight: bold;
+        border: none;
       }
       &__info {
         margin-top: 19px;
+        color: $description-text-color;
  
       }
     }
