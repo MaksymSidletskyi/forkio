@@ -1,0 +1,145 @@
+@import './variables.scss';
+
+
+.container {
+   padding: 10px;
+}
+
+.bg-wrapper {
+    background-image: url(../img/images/header-image.png);
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    height: 825px;
+}
+
+.header__wrapper {
+    width: 1020px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+
+    @media (min-width: 1200px) {
+        margin: 0 auto;
+    }
+
+    &-named {
+        display: flex;
+        
+    }
+
+    &-logo {
+        padding: 30px 15px;
+        
+    }
+
+    &-logo:hover {
+        content: url(../img/images/logo-hover.png);
+    }
+
+    &-title {
+        color: $main-text-color;
+        font-size: $fs-m;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        font-style: Lato;
+        font-weight: 700;
+    }
+
+    &-title:hover {
+        color: $main-second-text-color;
+    }
+
+    &-button {
+        background-color: $main-text-color;
+        border-radius: 30px;
+        
+        &-text {
+            color: $main-second-text-color;
+            font-size: $fs-xs;
+            padding: 0 15px;
+        }
+
+    }
+
+    &-button:hover {
+        background-color: $main-second-text-color;
+
+        .header__wrapper-button-text {
+            color: $main-text-color;
+        }
+    }
+}
+
+.navbar {
+   display: flex;
+
+    &-wrap {
+        display: flex;
+    }
+
+    &-link {
+        text-decoration: none;
+        font-size: $fs-xs;
+        color: $main-text-color;
+        margin-right: 48px;
+    }
+
+    &-link:hover {
+        color: $main-second-text-color;
+    }
+
+
+}
+
+
+
+.header__fork {
+text-align: center;
+
+    &-title {
+        color: $main-second-text-color;
+        font-size: $fs-xxxl;
+    }
+
+    &-text {
+        font-size: $fs-l;
+        color: $main-text-color;
+    }
+
+    &-description {
+        font-size: $fs-xs;
+        color: $description-text-color;
+    }
+
+    &-button {
+        background-color: $main-text-color;
+        border-radius: 40px;
+        position: relative;
+        top: 38px;
+        margin-top: 350px;
+        border: none;
+
+
+
+        &-text {
+            font-size: $fs-s;
+            color: $main-second-text-color;
+            padding: 0 20px;
+        }
+
+
+    }
+
+    &-button:hover {
+        background-color: $main-second-text-color;
+
+        .header__fork-button-text {
+            color: $main-text-color;
+        }
+    }
+}
