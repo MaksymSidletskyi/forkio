@@ -4,6 +4,7 @@
 @import './mixins.scss';
 
 
+
 .header {
     background-image: url("../img/images/header-image.png");
     background-position: center;
@@ -147,7 +148,7 @@
         font-size: $fs-s;
         line-height: 22px;
         font-family: MontserratBold;
-        border: 1px solid $main-text-color;
+        border: 2px solid $main-text-color;
     }
 
     &__button:hover {
@@ -174,6 +175,7 @@
 .header__wrapper-main:hover p {
     color: $main-second-text-color;
 }
+
 
 
 
