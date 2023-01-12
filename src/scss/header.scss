@@ -21,6 +21,7 @@
   
 
     &__wrapper {
+        position: relative;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
@@ -28,6 +29,7 @@
 
         @media (max-width: 992px) {
             background-color: rgba(39, 38, 42, 1);
+            padding-bottom: 50px;
             
         }
 
@@ -118,12 +120,24 @@
         display: flex;
 
         @media (min-width: 481px) and (max-width: 992px) {
-            display: block; 
+            position: absolute;
+            left: 15%;
+            top: 90px;
+            margin-left: 0px;
+
         } 
 
         @media (max-width: 480px) {
+            position: absolute;
+            display: block;
+            background-color: rgba(51, 51, 51, 1);
+            padding: 30px 50px;
+            top: 120PX;
+            left: 10%;
             display: none;
         }
+
+        
 
         &-item {
             margin-right: 50px;
@@ -134,7 +148,20 @@
             color: $main-text-color;
             font-size: $fs-xs;
             font-family: MontserratBold;
+
+            @media (max-width: 480px) {
+                display: inline-block;
+                font-size: 26px;
+                margin-bottom: 53px;
+                border-bottom: 2px solid rgba(59, 59, 59, 1);
+            }
+
+                
+        
         }
+
+
+
 
         &-link:hover {
             color: $main-second-text-color;
@@ -143,6 +170,72 @@
 }
 
 
+.menu__mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    border: none;
+  
+    background-color: transparent;
+    cursor: pointer;
+    &-hr {
+      @include menu-hr;
+      width: 15px;
+      height: 3px;
+      margin-right: 20px;
+      &::after,
+      &::before {
+        display: block;
+        content: '';
+        @include menu-hr
+      }
+      &::before {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      &::after {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+    }
+  
+    @media (min-width: 481px) {
+      display: none;
+    }
+  }
+
+
+  .close {
+    position: absolute;
+    top: 0px;
+    width: 32px;
+    height: 32px;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 30px;
+    width: 2px;
+    background-color: #FFFFFF;
+  
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+  
+  
 
 .buy-button {
     background-color: $main-text-color;
@@ -189,6 +282,11 @@
     }
 
 
+    .nav__list.active {
+        top: 100px;
+      }
+      
+
     &__info {
         text-align: center;
         font-size: $fs-xxs;
@@ -207,13 +305,10 @@
     color: $main-second-text-color;
 }
 
-
-@media (max-width: 480px) {
-    .header__fork-text {
-        content: 'A Real Gamechanger In The World Of Web-Development';
-        font-size: 18px;
-    }
+.active {
+    display: inline-block;
 }
+
 
 
   
