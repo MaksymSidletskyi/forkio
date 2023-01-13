@@ -130,4 +130,79 @@
 
 
   
-  
+.feedback-bg {
+    background-image: url("../img/images/feedback-bg.png");
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+}
+
+.grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 125px;
+    row-gap: 107px;
+}
+
+.grid__img {
+    text-align: center;
+}
+
+.grid__text {
+    text-align: center;
+    font-family: BoldItalic;
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.text-one {
+    margin-top: 33px;
+}
+
+.text-two,
+.text-five {
+    margin-top: 29px;
+}
+
+.text-three {
+    margin-top: 22px;
+}
+
+.text-six {
+    margin-top: 30px;
+}
+
+.text-four {
+    margin-top: 33px;
+}
+
+@media (min-width: 481px) and (max-width: 992px) {
+    .grid {
+        /* max-width: 1200px; */
+        /* margin: auto; */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 90px;
+        row-gap: 55px;
+        padding: 0 18px;
+    }
+
+    .text-four {
+        margin-top: 45px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .grid {
+        /* max-width: 1200px; */
+        /* margin: auto; */
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 41px;
+        padding: 0 16px;
+
+    }
+}
