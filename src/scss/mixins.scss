@@ -1,5 +1,7 @@
 @mixin menu-hr {
+  float: right;
     width: 26px;
-    border-top: 2px solid #ffffff;
+    border-top: 3px solid rgba(255, 255, 255, 1);
+    border-radius: 1px;
   }
   

@@ -21,7 +21,7 @@
   
 
     &__wrapper {
-        position: relative;
+        // position: relative;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
@@ -33,10 +33,19 @@
             
         }
 
+
+
         &-main {
             display: flex;
             align-items: center;
             text-decoration: none;
+
+            &-logo {
+                @media (max-width: 480px) {
+                    position: absolute;
+                    left: 10%;                 
+                }
+            }
 
             &-text {
                 color: $main-text-color;
@@ -56,6 +65,10 @@
 
         margin-top: 125px;
         text-align: center;
+
+        @media (max-width: 480px) {
+            padding: 0px 10px;
+        }
 
         &-title {
 
@@ -109,10 +122,6 @@
     align-items: center;
     
 
-    @media (min-width: 481px) and (max-width: 992px) {
-        display: block;
-    }
-
 
 
 
@@ -123,24 +132,31 @@
             position: absolute;
             left: 15%;
             top: 90px;
-            margin-left: 0px;
-
+            // display: inline-block;
         } 
 
         @media (max-width: 480px) {
             position: absolute;
             display: block;
             background-color: rgba(51, 51, 51, 1);
-            padding: 30px 50px;
-            top: 120PX;
-            left: 10%;
+            width: 285px;
+            top: 117PX;
+            padding-bottom: 14px;
+            left: 6%;
             display: none;
+            
         }
 
         
 
         &-item {
             margin-right: 50px;
+
+            @media (max-width: 480px) {
+                border-bottom: 3px solid rgba(59, 59, 59, 1);
+                margin: 0 auto;
+                display: block;
+            }
         }
 
         &-link {
@@ -150,18 +166,18 @@
             font-family: MontserratBold;
 
             @media (max-width: 480px) {
-                display: inline-block;
+                display: block;
                 font-size: 26px;
-                margin-bottom: 53px;
-                border-bottom: 2px solid rgba(59, 59, 59, 1);
-            }
-
+                padding-bottom: 23px;
+                text-align: left;
+                padding-left: 30px;
+                margin-top: 30px;
+                color: rgba(255, 255, 255, 1);
                 
+
+            }
         
         }
-
-
-
 
         &-link:hover {
             color: $main-second-text-color;
@@ -169,25 +185,32 @@
     }
 }
 
+.nav__list-link:active {
+    border-left: 8px solid rgba(141, 129, 172, 1);               
+     color: $main-text-color;
+}
+
+
+
 
 .menu__mobile {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 20px;
-    top: 32px;
+    right: 35px;
+    top: 40px;
     width: 32px;
     height: 32px;
     border: none;
-  
     background-color: transparent;
     cursor: pointer;
+
+
     &-hr {
+
       @include menu-hr;
       width: 15px;
-      height: 3px;
-      margin-right: 20px;
       &::after,
       &::before {
         display: block;
@@ -195,10 +218,6 @@
         @include menu-hr
       }
       &::before {
-        margin-top: 5px;
-        margin-bottom: 5px;
-      }
-      &::after {
         margin-top: 5px;
         margin-bottom: 5px;
       }
@@ -247,6 +266,13 @@
     border-radius: 40px;
     border: none;
     font-family: MontserratBold;
+
+    @media (max-width: 480px) {
+        margin: auto;
+        margin-right: 20px;
+        padding: 11px 10px;
+    }
+
 }
 
 .buy-button:hover {
@@ -273,6 +299,13 @@
         line-height: 22px;
         font-family: MontserratBold;
         border: 2px solid $main-text-color;
+
+
+        @media (max-width: 480px) {
+            padding: 13px 29px;
+            font-size: 18px;
+            
+        }
     }
 
     &__button:hover {
