@@ -3,12 +3,22 @@
 @import './fonts.scss';
 @import './mixins.scss';
 
+
 .container {
     padding: 0 10px;
 }
 
 .header {
     background-image: url("../img/images/header-image.png");
+
+
+
+.header {
+    background-image: url(../img/images/header-image.png);
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     background-position: center;
     width: 100%;
     background-size: cover;
@@ -58,7 +68,13 @@
                     display: none;
                 }
             }
+
         }
+
+
+        }
+
+
     }
 
     &__fork {
