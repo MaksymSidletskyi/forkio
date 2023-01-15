@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.back-img {
+    background-image: url(../img/images/back-img.png);
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+.cards-caption {
+    width: 650px;
+    color: white;
+    font-family: MontserratBold;
+    font-size: 48px;
+    margin: auto;
+    padding-top: 112px;
+}
+
+
+
+
+
+.cards {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 61px 43px 73px 43px;
+    gap: 15px;
+}
+
+.wrap {
+    display: flex;
+    gap: 15px;
+
+}
+.wrapone {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.card__item {
+    background-color: rgba(111, 89, 99, 1);
+}
+
+.card__item-three {
+    background-color: rgba(71, 49, 72, 1);
+}
+
+.card-wrapper {
+    width: 256px;
+    background-color: rgba(102, 72, 81, 1);
+}
+
+.card-wrapper__three {
+    width: 299px;
+    background-color: rgba(77, 53, 73, 1);
+}
+
+.card-desc {
+    font-family: MontserratRegular;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: white;
+    padding: 36px 0;
+    text-align: center;
+}
+
+
+.card-desc-three {
+    padding: 43px 0;
+}
+
+.card__price {
+    font-family: MontserratBold;
+    font-size: 60px;
+    color: white;
+    padding-top: 30px;
+}
+
+.dollar {
+    font-family: MontserratRegular;
+}
+
+.card__price-three {
+    padding-top: 14px;
+    font-size: 82px;
+}
+
+.price__month {
+    color: white;
+    font-family: MontserratRegular;
+    font-size: 14px;
+    padding-top: 20px;
+    text-transform: uppercase;
+}
+
+.price__month-three {
+    padding-top: 16px;
+}
+
+.line {
+    background-color: rgba(141, 129, 172, 1);
+    width: 60px;
+    height: 5px;
+    margin-top: 38px;
+}
+
+.line-three {
+    margin-top: 46px;
+}
+
+.desc {
+    color: white;
+    font-family: MontserratRegular;
+    font-size: 16px;
+    text-align: center;
+    /* padding-top: 30px; */
+    padding: 30px 16px 0;
+}
+
+.desc-one {
+    padding-top: 36px;
+}
+
+.desc-three {
+    padding-top: 40px;
+}
+
+.button {
+    width: 160px;
+    height: 42px;
+    background-color: rgba(125, 109, 121, 1);
+    font-family: MontserratRegular;
+    text-transform: uppercase;
+    font-size: 16px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: white;
+    // cursor: pointer;
+}
+
+.btn-one {
+    margin-top: 64px;
+    margin-bottom: 37px;
+}
+
+.btn-two {
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+.btn-three {
+    margin-top: 83px;
+    margin-bottom: 47px;
+}
+
+.btn-four {
+    margin-top: 38px;
+    margin-bottom: 40px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrap {
+    display: flex;
+}
+
+
+@media (min-width: 481px) and (max-width: 992px) {
+
+.cards-caption {
+    font-size: 42px;
+    width: 562px;
+    padding-top: 90px;
+}
+
+.cards {
+    flex-direction: column;
+}
+
+.wrap {
+    padding: 0 108px 0 121px;
+}
+
+.wrapone {
+    padding: 0 109px 0 79px;
+    margin-top: 30px;
+}
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .cards-caption {
+        font-size: 28px;
+        width: 320px;
+        padding-top: 2px;
+        text-align: center;
+    }
+    
+    .cards {
+        flex-direction: column;
+    }
+    .wrap {
+        flex-direction: column;
+    }
+    .wrapone {
+        flex-direction: column;
+    }
+}
