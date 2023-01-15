@@ -3,19 +3,12 @@
 @import './fonts.scss';
 @import './mixins.scss';
 
-
 .container {
     padding: 0 10px;
 }
 
-
-
 .header {
-    background-image: url(../img/images/header-image.png);
-    max-width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+    background-image: url("../img/images/header-image.png");
     background-position: center;
     width: 100%;
     background-size: cover;
@@ -65,70 +58,64 @@
                     display: none;
                 }
             }
-
         }
-
-
-        }
-        &__fork {
-
-            margin-top: 125px;
-            text-align: center;
-    
-            @media (max-width: 480px) {
-                padding: 0px 10px;
-            }
-    
-            &-title {
-    
-                color: $main-second-text-color;
-                font-size: $fs-xxxl;
-                font-family: MontserratBold;
-    
-                @media (min-width: 481px) and (max-width: 992px) {
-                    font-size: 72px;
-                }
-    
-                @media (max-width: 480px) {
-                    font-size: $fs-xl;
-                }
-            }
-    
-            &-text {
-                color: $main-text-color;
-                font-size: $fs-l;
-                margin-top: 20px;
-                font-family: LatoRegular;
-    
-                @media (min-width: 481px) and (max-width: 992px) {
-                    font-size: 24px;
-                }
-    
-                @media (max-width: 480px) {
-                    font-size: 18px;
-                    text-transform: capitalize;
-                }
-            }
-    
-            &-description {
-                color: $description-text-color;
-                font-size: $fs-xs;
-                margin-top: 20px;
-                font-family: MontserratRegular;
-    
-    
-                @media (min-width: 481px) and (max-width: 992px) {
-                    font-size: $fs-xxs;
-                }
-    
-    
-            }
-        }
-
     }
 
-    
+    &__fork {
 
+        margin-top: 125px;
+        text-align: center;
+
+        @media (max-width: 480px) {
+            padding: 0px 10px;
+        }
+
+        &-title {
+
+            color: $main-second-text-color;
+            font-size: $fs-xxxl;
+            font-family: MontserratBold;
+
+            @media (min-width: 481px) and (max-width: 992px) {
+                font-size: 72px;
+            }
+
+            @media (max-width: 480px) {
+                font-size: $fs-xl;
+            }
+        }
+
+        &-text {
+            color: $main-text-color;
+            font-size: $fs-l;
+            margin-top: 20px;
+            font-family: LatoRegular;
+
+            @media (min-width: 481px) and (max-width: 992px) {
+                font-size: 24px;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 18px;
+                text-transform: capitalize;
+            }
+        }
+
+        &-description {
+            color: $description-text-color;
+            font-size: $fs-xs;
+            margin-top: 20px;
+            font-family: MontserratRegular;
+
+
+            @media (min-width: 481px) and (max-width: 992px) {
+                font-size: $fs-xxs;
+            }
+
+
+        }
+    }
+}
 
 .nav {
     display: flex;
@@ -355,7 +342,3 @@
     display: inline-block;
 }
 
-
-
-  
-  
