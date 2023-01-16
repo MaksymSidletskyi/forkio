@@ -61,7 +61,7 @@
     display: flex;
     margin-right: 10px;
     border-radius: 3px;
-    border: 1px solid rgba(213, 213, 213, 1);
+    border: 1px solid $border-color;
 }
 
 .editor-button__actions:link,
@@ -71,14 +71,14 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: rgba(51, 51, 51, 1);
+    color: $editor-button-text-color;
     padding: 3px 10px;
     font-size: 12px;
     font-weight: 600;
 }
 
 .editor-button__actions {
-    border-right: 1px solid rgba(213, 213, 213, 1);
+    border-right: 1px solid $border-color;
     user-select: none;
 }
 
@@ -88,7 +88,7 @@
 
 .editor-button__count:hover,
 .editor-button__count:active {
-    color: rgba(100, 136, 207, 1);
+    color: $editor-button-hover;
 }
 @media (min-width: 320px) and (max-width: 480px) {
     .editor-button {

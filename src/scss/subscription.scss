@@ -1,8 +1,8 @@
 .cards-caption {
     width: 650px;
-    color: white;
+    color: $main-second-text-color;
     font-family: MontserratBold;
-    font-size: 48px;
+    font-size: $fs-xl;
     margin: auto;
     padding-top: 112px;
 }
@@ -16,80 +16,96 @@
     gap: 15px;
 }
 
-.cards-wrapper {
-    display: flex;
-    gap: 15px;
-}
-
-
+.cards-wrapper,
 .cards-wrapper-second {
     display: flex;
     gap: 15px;
     align-items: center;
 }
 
-.card-wrapper__item {
-    background-color: rgba(111, 89, 99, 1);
-}
-
-.card-wrapper__item_three {
-    background-color: rgba(71, 49, 72, 1);
-}
-
 .card-wrapper {
     width: 256px;
-    background-color: rgba(102, 72, 81, 1);
+    background-color: $background-subscription-color;
+
+    &__item {
+        background-color: $header-background-color;
+    }
+
+    &__item_three {
+        background-color: $background-subscription-second-color;
+    }
+
+    &__description {
+        font-family: MontserratRegular;
+        font-size: $fs-m;
+        text-transform: uppercase;
+        color: $main-second-text-color;
+        padding: 36px 0;
+        text-align: center;
+    }
+
+    &__description_three {
+        padding: 43px 0;
+    }
+
+
+    &__price {
+        font-family: MontserratBold;
+        font-size: $price-xl;
+        color: $main-second-text-color;
+        padding-top: 30px;
+    }
+    &__price_three {
+        padding-top: 14px;
+        font-size: $fs-xxxl;
+    }
+    
+    &__month {
+        color: $main-second-text-color;
+        font-family: MontserratRegular;
+        font-size: $fs-xxs;
+        padding-top: 20px;
+        text-transform: uppercase;
+    }
+
+    &__price_three {
+        padding-top: $fs-xs;
+    }
+
+    &__subtitle {
+        color: $main-second-text-color;
+        font-family: MontserratRegular;
+        font-size: $fs-xs;
+        text-align: center;
+        padding: 30px 16px 0;
+    }
+    
+    &__subtitle-one {
+        padding-top: 36px;
+    }
+    
+    &__subtitle-three {
+        padding-top: 40px;
+    }
+
+    &__middle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .card-wrapper__three {
     width: 299px;
-    background-color: rgba(77, 53, 73, 1);
-}
-
-.card-wrapper__description {
-    font-family: MontserratRegular;
-    font-size: 24px;
-    text-transform: uppercase;
-    color: white;
-    padding: 36px 0;
-    text-align: center;
-}
-
-
-.card-wrapper__description_three {
-    padding: 43px 0;
-}
-
-.card-wrapper__price {
-    font-family: MontserratBold;
-    font-size: 60px;
-    color: white;
-    padding-top: 30px;
+    background-color: $header-background-second-color;
 }
 
 .dollar {
     font-family: MontserratRegular;
 }
 
-.card-wrapper__price_three {
-    padding-top: 14px;
-    font-size: 82px;
-}
-
-.card-wrapper__month {
-    color: white;
-    font-family: MontserratRegular;
-    font-size: 14px;
-    padding-top: 20px;
-    text-transform: uppercase;
-}
-
-.card-wrapper__price_three {
-    padding-top: 16px;
-}
-
 .line {
-    background-color: rgba(141, 129, 172, 1);
+    background-color: $line-color;
     width: 60px;
     height: 5px;
     margin-top: 38px;
@@ -99,36 +115,19 @@
     margin-top: 46px;
 }
 
-.card-wrapper__subtitle {
-    color: white;
-    font-family: MontserratRegular;
-    font-size: 16px;
-    text-align: center;
-    /* padding-top: 30px; */
-    padding: 30px 16px 0;
-}
-
-.card-wrapper__subtitle-one {
-    padding-top: 36px;
-}
-
-.card-wrapper__subtitle-three {
-    padding-top: 40px;
-}
-
 .button {
     width: 160px;
     height: 42px;
-    background-color: rgba(125, 109, 121, 1);
+    background-color: $background-subscription-button-color;
     font-family: MontserratRegular;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: $fs-xs;
     border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
-    color: white;
+    color: $main-second-text-color;
     cursor: pointer;
 }
 
@@ -152,52 +151,50 @@
     margin-bottom: 40px;
 }
 
-.card-wrapper__middle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 
 
 
 
 @media (min-width: 481px) and (max-width: 992px) {
 
-.cards-caption {
-    font-size: 42px;
-    width: 562px;
-    padding-top: 90px;
-}
+    .cards-caption {
+        font-size: $adap-fs-xl;
+        width: 562px;
+        padding-top: 90px;
+    }
 
-.subscription-cards {
-    flex-direction: column;
-}
+    .subscription-cards {
+        flex-direction: column;
+    }
 
-.cards-wrapper {
-    padding: 0 108px 0 121px;
-}
+    .cards-wrapper {
+        padding: 0 108px 0 121px;
+    }
 
-.cards-wrapper-second {
-    padding: 0 109px 0 79px;
-    margin-top: 30px;
-}
+    .cards-wrapper-second {
+        padding: 0 109px 0 79px;
+        margin-top: 30px;
+    }
 
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
     .cards-caption {
-        font-size: 28px;
+        font-size: $adap-fs-s;
         width: 320px;
         padding-top: 2px;
         text-align: center;
     }
-    
+
     .subscription-cards {
         flex-direction: column;
     }
+
     .cards-wrapper {
         flex-direction: column;
     }
+
     .cards-wrapper-second {
         flex-direction: column;
     }
