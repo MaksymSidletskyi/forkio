@@ -16,9 +16,7 @@
     }
 
     &__item {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+        @include flex(space-between, flex-start);
         margin-bottom: 35px;
         max-width: 460px;
     }
@@ -103,9 +101,7 @@
         }
     
         &__items {
-            display: flex;
-            flex-direction: column;
-            justify-self: flex-start;
+            @include flex-self(column, flex-start);
             margin-left: 30px;
             margin-top: 52px;
         }
