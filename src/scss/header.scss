@@ -22,8 +22,7 @@
 
     &__wrapper {
         margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
+        @include flex-juctify(space-between);
         padding: 30px 90px;
 
         @media (max-width: 992px) {
@@ -35,8 +34,7 @@
 
 
         &-main {
-            display: flex;
-            align-items: center;
+            @include flex-align(center);
             text-decoration: none;
 
             &-logo {
@@ -117,12 +115,7 @@
 }
 
 .nav {
-    display: flex;
-    align-items: center;
-    
-
-
-
+    @include flex-align(center);
 
     &__list {
         display: flex;
@@ -192,9 +185,7 @@
 
 
 .menu__mobile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(center, center);
     position: absolute;
     right: 35px;
     top: 40px;
@@ -258,9 +249,7 @@
     background-color: $main-text-color;
     color: $main-second-text-color;
     padding: 11px 20px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    @include flex(flex-end, center);
     border-radius: 40px;
     border: none;
     font-family: MontserratBold;
