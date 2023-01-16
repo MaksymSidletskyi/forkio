@@ -124,52 +124,55 @@
         <section class="here">
             <div class="here__items">
                 <div class="here__item">
-                    <div class="here__wrapp">
+                    <div class="here-wrapper__img">
                         <img src="./img/images/here-1.png" alt="search" class="here__png">
                     </div>
                     <div class="here__text">
                         <div class="here__title">Creatred to Make The Web Better</div>
-                        <div class="here__descr">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet
+                        <div class="here__description">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet
                             vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue.</div>
                     </div>
                 </div>
+
                 <div class="here__item">
-                    <div class="here__wrapp">
+                    <div class="here-wrapper__img">
                         <img src="./img/images/here-2.png" alt="timer" class="here__png">
                     </div>
                     <div class="here__text">
                         <div class="here__title">Incredibly Powerful Tool</div>
-                        <div class="here__descr">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio,
+                        <div class="here__description">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio,
                             ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat
                             volutpat. </div>
                     </div>
                 </div>
+
                 <div class="here__item">
-                    <div class="here__wrapp">
+                    <div class="here-wrapper__img">
                         <img src="./img/images/here-3.png" alt="experimental" class="here__png">
                     </div>
                     <div class="here__text">
                         <div class="here__title">Experimental Stuff</div>
-                        <div class="here__descr">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio,
+                        <div class="here__description">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio,
                             ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat
                             volutpat. </div>
                     </div>
                 </div>
+
                 <div class="here__item">
-                    <div class="here__wrapp">
+                    <div class="here-wrapper__img">
                         <img src="./img/images/here-4.png" alt="watch" class="here__png">
                     </div>
                     <div class="here__text">
                         <div class="here__title">Creatred to Make The Web Better</div>
-                        <div class="here__descr">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio,
+                        <div class="here__description">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio,
                             ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat
                             volutpat.</div>
                     </div>
                 </div>
             </div>
-            <h2 class="title">Here is what you get</h2>
+            <h2 class="here__caption">Here is what you get</h2>
             <img src="./img/images/editor.png" alt="editor" class="here__img">
-            <img src="./img/images/small.png" alt="" class="here__img1">
+            <img src="./img/images/small.png" alt="" class="here__img-small">
         </section>
 
 
@@ -232,7 +235,7 @@
                         venenatis.
                         Pellentesque porttitor cursus massa et vestibulum.</p>
                 </div>
-            </div> <!-- grid -->
+            </div> 
 
             <p class="feedback-footer">
                 Duis lobortis arcu sed arcu tincidunt feugiat. Nulla nisi mauris, facilisis vitae aliquet id, imperdiet
@@ -241,22 +244,35 @@
             </p>
             <hr class="feedback-hr">
 
+
+
+
+
+
+
+
+
+
+
+
+
             <p class="cards-caption">Fork Subscription Pricing</p>
 
-            <div class="cards">
+            <div class="subscription-cards">
 
-                <div class="wrap">
+                <div class="cards-wrapper">
+
                     <div class="card-wrapper">
-                        <div class="card__item">
-                            <p class="card-desc">Students</p>
-                        </div> <!-- card__item -->
+                        <div class="card-wrapper__item">
+                            <p class="card-wrapper__description">Students</p>
+                        </div> 
 
-                        <div class="flex">
-                            <p class="card__price"><span class="dollar">$</span>29</p>
+                        <div class="card-wrapper__middle">
+                            <p class="card-wrapper__price"><span class="dollar">$</span>29</p>
 
-                            <p class="price__month">per month</p>
+                            <p class="card-wrapper__month">per month</p>
                             <div class="line"></div>
-                            <p class="desc desc-one">Personal License</p>
+                            <p class="card-wrapper__subtitle card-wrapper__subtitle-one">Personal License</p>
                         </div> <!-- flex -->
 
                         <div class="button btn-one">
@@ -268,15 +284,15 @@
                     </div> <!-- card-wrapper -->
 
                     <div class="card-wrapper">
-                        <div class="card__item">
-                            <p class="card-desc">professional</p>
+                        <div class="card-wrapper__item">
+                            <p class="card-wrapper__description">professional</p>
                         </div>
-                        <div class="flex">
-                            <p class="card__price"><span class="dollar">$</span>59</p>
+                        <div class="card-wrapper__middle">
+                            <p class="card-wrapper__price"><span class="dollar">$</span>59</p>
 
-                            <p class="price__month">per month</p>
+                            <p class="card-wrapper__month">per month</p>
                             <div class="line"></div>
-                            <p class="desc">Professional License Email Support</p>
+                            <p class="card-wrapper__subtitle">Professional License Email Support</p>
                         </div> <!-- flex -->
 
                         <div class="button btn-two">
@@ -288,32 +304,33 @@
 
                 </div>
 
-                <div class="wrapone">
+                <div class="cards-wrapper-second">
 
 
                     <div class="card-wrapper card-wrapper__three">
-                        <div class="card__item card__item-three">
-                            <p class="card-desc card-desc-three">agency</p>
+                        <div class="card-wrapper__item card-wrapper__item_three">
+                            <p class="card-wrapper__description card-wrapper__description_three">agency</p>
                         </div>
-                        <div class="flex">
-                            <p class="card__price card__price-three"><span class="dollar">$</span>99</p>
-                            <p class="price__month price__month-three">per month</p>
+                        <div class="card-wrapper__middle">
+                            <p class="card-wrapper__price card-wrapper__price_three"><span class="dollar">$</span>99</p>
+                            <p class="card-wrapper__month card-wrapper__month_three">per month</p>
                             <div class="line line-three"></div>
-                            <p class="desc desc-three">1-12 Team Members Phone Support</p>
+                            <p class="card-wrapper__subtitle card-wrapper__subtitle-three">1-12 Team Members Phone Support</p>
                         </div> <!-- flex -->
                         <div class="button btn-three">
                             <p>purchase</p>
                         </div>
                     </div>
                     <div class="card-wrapper">
-                        <div class="card__item">
-                            <p class="card-desc">enterprise</p>
+                        <div class="card-wrapper__item">
+                            <p class="card-wrapper__description">enterprise</p>
                         </div> <!-- card__item -->
-                        <div class="flex">
-                            <p class="card__price"><span class="dollar">$</span>159</p>
-                            <p class="price__month">per month</p>
+
+                        <div class="card-wrapper__middle">
+                            <p class="card-wrapper__price"><span class="dollar">$</span>159</p>
+                            <p class="card-wrapper__month">per month</p>
                             <div class="line"></div>
-                            <p class="desc">Unlimited Team Members 24/ 7 Phone Support</p>
+                            <p class="card-wrapper__subtitle">Unlimited Team Members 24/ 7 Phone Support</p>
                         </div> <!-- flex -->
                         <div class="button btn-four">
                             <p>purchase</p>

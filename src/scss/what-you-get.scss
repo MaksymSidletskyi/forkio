@@ -1,103 +1,91 @@
 .here {
-    background-color: #F4F4F4;
+    background-color: $background-color;
     padding: 95px 0 75px;
     display: grid;
     grid-template-columns: (2, 1fr);
-    /* grid-template-rows: 65px 1fr; */
     grid-template-areas:
         "items title"
         "items img";
     column-gap: 54px;
     margin-top: 70px;
+
+    &__items {
+        justify-self: end;
+        padding-left: 10px;
+        grid-area: items;
+    }
+
+    &__item {
+        @include flex(space-between, flex-start);
+        margin-bottom: 35px;
+        max-width: 460px;
+    }
+
+    &__item:last-child {
+        margin-bottom: 0;
+    
+    }
+    
+    &-wrapper__img {
+        min-width: 111px;
+        margin-right: 23px;
+    }
+    
+    &__title {
+        font-size: $fs-xs;
+        line-height: 21px;
+        color: $caption-text-color;
+        margin-bottom: 17px;
+        font-family: MontserratRegular;
+    }
+    
+    &__description {
+        font-size: $fs-xxs;
+        line-height: 21px;
+        color: $description-text-color;
+        font-family: MontserratRegular;
+    }
+
+    &__caption {
+        grid-area: title;
+        text-align: start;
+        margin-left: 15px;
+        font-family: Bold;
+        font-size: $fs-xl;
+        color: $main-text-color;
+        font-family: MontserratBold;
+    }
+    
+    &__caption:before {
+        content: "<";
+        color: $main-text-color;
+        font-family: MontserratBold;
+    }
+    
+    &__caption:after {
+        content: ">";
+        color: $main-text-color;
+        font-family: MontserratBold;
+    }
+    
+    &__img-small {
+        display: none;
+    }
+    
+    &__img {
+        width: 100%;
+        grid-area: img;
+    }
+
 }
-
-.here__img1 {
-    display: none;
-}
-
-.title {
-    grid-area: title;
-    text-align: start;
-    margin-left: 15px;
-    font-family: Bold;
-    font-size: $fs-xl;
-    color: $main-text-color;
-    font-family: MontserratBold;
-}
-
-
-
-.here__img {
-    width: 100%;
-    grid-area: img;
-}
-
-.here__wrapp {
-    min-width: 111px;
-    margin-right: 23px;
-}
-
-
-.here__descr {
-    font-size: $fs-xxs;
-    line-height: 21px;
-    color: $description-text-color;
-    font-family: MontserratRegular;
-}
-
-
-.here__title {
-    font-size: $fs-xs;
-    line-height: 21px;
-    color: $caption-text-color;
-    margin-bottom: 17px;
-    font-family: MontserratRegular;
-}
-
-
-.here__items {
-    justify-self: end;
-    padding-left: 10px;
-    grid-area: items;
-}
-
-.here__item {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 35px;
-    max-width: 460px;
-}
-
-.here__item:last-child {
-    margin-bottom: 0;
-
-}
-
-.title:before {
-    content: "<";
-    color: $main-text-color;
-    font-family: MontserratBold;
-}
-
-.title:after {
-    content: ">";
-    color: $main-text-color;
-    font-family: MontserratBold;
-}
-
-
 
 @media (min-width: 481px) and (max-width: 992px) {
 
-    .here__img1 {
-        display: none;
-    }
+
 
     .here {
-        background-color: rgba(255, 255, 255, 1);
+        background-color: $main-second-text-color;
         grid-template-columns: (1, 1fr);
-        /* grid-template-rows: 65px 1fr; */
         grid-template-areas:
             "title"
             "items"
@@ -105,35 +93,39 @@
             "img";
         padding: 98px 0 0 0;
 
+        &__caption {
+            display: flex;
+            justify-content: center;
+            margin-left: 0;
+            font-size: $adap-fs-xl;
+        }
+    
+        &__items {
+            @include flex-self(column, flex-start);
+            margin-left: 30px;
+            margin-top: 52px;
+        }
+    
+        &__item {
+            margin-bottom: 59px;
+        }
+    
+        &__img {
+            margin-top: 73px;
+        }
+
+        &__img-small {
+            display: none;
+        }
+
     }
 
-    .title {
-        display: flex;
-        justify-content: center;
-        margin-left: 0;
-        font-size: 42px;
-    }
 
-    .here__items {
-        display: flex;
-        flex-direction: column;
-        justify-self: flex-start;
-        margin-left: 30px;
-        margin-top: 52px;
-    }
-
-    .here__item {
-        margin-bottom: 59px;
-    }
-
-    .here__img {
-        margin-top: 73px;
-    }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
     .here {
-        background-color: rgba(255, 255, 255, 1);
+        background-color: $main-second-text-color;
         grid-template-columns: (1, 1fr);
         grid-template-areas:
             "title"
@@ -141,50 +133,49 @@
             "items"
             "img";
 
-    }
+            &__caption {
+                margin: auto;
+                font-family: MontserratBold;
+                font-size: $adap-fs-m;
+                text-align: center;
+                padding: 0 43px 0 42px;
+            }
+        
+            &__item {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            &__title {
+                text-align: center;
+                margin: 20px 0 14px 0;
+                font-family: MontserratRegular;
+                font-size: $fs-xs;
+            }
+        
+            &__items {
+                padding: 36px 21px 58px;
+            }
+        
+            &__description {
+                text-align: center;
+                font-family: LatoRegular;
+                font-size: $fs-xxs;
+            }
+        
+            &__img {
+                display: none;
+            }
+        
+            &__img-small {
+                display: block;
+            }
+        
+            &-wrapper__img {
+                margin: 0;
+                min-width: 0;
+            }
 
-    .title {
-        margin: auto;
-        font-family: MontserratBold;
-        font-size: 32px;
-        text-align: center;
-        font-size: 32px;
-        padding: 0 43px 0 42px;
-    }
-
-    .here__item {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .here__title {
-        text-align: center;
-        margin: 20px 0 14px 0;
-        font-family: MontserratRegular;
-        font-size: $fs-xs;
-    }
-
-    .here__items {
-        padding: 36px 21px 58px;
-    }
-
-    .here__descr {
-        text-align: center;
-        font-family: LatoRegular;
-        font-size: $fs-xxs;
-    }
-
-    .here__img {
-        display: none;
-    }
-
-    .here__img1 {
-        display: block;
-    }
-
-    .here__wrapp {
-        margin: 0;
-        min-width: 0;
     }
 }
 

@@ -1,8 +1,6 @@
 .editor-wrapper {
     padding-top: 129px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-direction(column, center);
 
     &__caption {
         width: 759px;
@@ -47,8 +45,7 @@
 
 
 .editor-button {
-    display: flex;
-    justify-content: center;
+    @include flex-juctify(center);
     width: 100%;
     margin-top: 13px;
 }
@@ -61,7 +58,7 @@
     display: flex;
     margin-right: 10px;
     border-radius: 3px;
-    border: 1px solid rgba(213, 213, 213, 1);
+    border: 1px solid $border-color;
 }
 
 .editor-button__actions:link,
@@ -69,16 +66,15 @@
 .editor-button__count:link,
 .editor-button__count:visited {
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: rgba(51, 51, 51, 1);
+    @include flex-align(center);
+    color: $editor-button-text-color;
     padding: 3px 10px;
     font-size: 12px;
     font-weight: 600;
 }
 
 .editor-button__actions {
-    border-right: 1px solid rgba(213, 213, 213, 1);
+    border-right: 1px solid $border-color;
     user-select: none;
 }
 
@@ -88,12 +84,11 @@
 
 .editor-button__count:hover,
 .editor-button__count:active {
-    color: rgba(100, 136, 207, 1);
+    color: $editor-button-hover;
 }
 @media (min-width: 320px) and (max-width: 480px) {
     .editor-button {
-        display: flex;
-        flex-direction: column;
+        @include direction(column);
         width: 100%;
         align-items: center;
     }

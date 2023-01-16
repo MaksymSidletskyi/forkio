@@ -21,14 +21,12 @@
   
 
     &__wrapper {
-        // position: relative;
         margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
+        @include flex-juctify(space-between);
         padding: 30px 90px;
 
         @media (max-width: 992px) {
-            background-color: rgba(39, 38, 42, 1);
+            background-color: $header-fork-background-color;
             padding-bottom: 50px;
             
         }
@@ -36,8 +34,7 @@
 
 
         &-main {
-            display: flex;
-            align-items: center;
+            @include flex-align(center);
             text-decoration: none;
 
             &-logo {
@@ -126,12 +123,7 @@
 }
 
 .nav {
-    display: flex;
-    align-items: center;
-    
-
-
-
+    @include flex-align(center);
 
     &__list {
         display: flex;
@@ -140,13 +132,12 @@
             position: absolute;
             left: 15%;
             top: 90px;
-            // display: inline-block;
         } 
 
         @media (max-width: 480px) {
             position: absolute;
             display: block;
-            background-color: rgba(51, 51, 51, 1);
+            background-color: $editor-button-text-color;
             width: 285px;
             top: 117PX;
             padding-bottom: 14px;
@@ -161,7 +152,7 @@
             margin-right: 50px;
 
             @media (max-width: 480px) {
-                border-bottom: 3px solid rgba(59, 59, 59, 1);
+                border-bottom: 3px solid $header-burger-line;
                 margin: 0 auto;
                 padding: 23px 0px;
                 display: block;
@@ -179,7 +170,14 @@
                 font-size: $adap-fs-xs;
                 text-align: left;
                 padding-left: 30px;
-                color: rgba(255, 255, 255, 1);
+                color: $main-second-text-color;
+
+                // padding-bottom: 23px;
+                // text-align: left;
+                // padding-left: 30px;
+                // margin-top: 30px;
+                // color: $main-second-text-color;
+
                 
 
             }
@@ -196,15 +194,14 @@
     border-left: 8px solid rgba(141, 129, 172, 1);
     line-height: 53px;               
     color: $main-text-color;
-}
+
+
 
 
 
 
 .menu__mobile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(center, center);
     position: absolute;
     right: 35px;
     top: 40px;
@@ -252,7 +249,7 @@
     content: ' ';
     height: 30px;
     width: 2px;
-    background-color: #FFFFFF;
+    background-color: $main-second-text-color;
   
   }
   .close:before {
@@ -268,9 +265,7 @@
     background-color: $main-text-color;
     color: $main-second-text-color;
     padding: 11px 20px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    @include flex(flex-end, center);
     border-radius: 40px;
     border: none;
     font-family: MontserratBold;
@@ -345,4 +340,8 @@
 .active {
     display: inline-block;
 }
+
+}
+
+
 
