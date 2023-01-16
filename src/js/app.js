@@ -1,4 +1,3 @@
-
 const button = document.querySelector('.menu__mobile');
 const menu = document.querySelector('.menu__mobile-hr')
 

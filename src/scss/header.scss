@@ -77,7 +77,7 @@
             font-family: MontserratBold;
 
             @media (min-width: 481px) and (max-width: 992px) {
-                font-size: 72px;
+                font-size: $adap-fs-xxl;
             }
 
             @media (max-width: 480px) {
@@ -92,11 +92,11 @@
             font-family: LatoRegular;
 
             @media (min-width: 481px) and (max-width: 992px) {
-                font-size: 24px;
+                font-size: $fs-m;
             }
 
             @media (max-width: 480px) {
-                font-size: 18px;
+                font-size: $adap-fs-xxs;
                 text-transform: capitalize;
             }
         }
@@ -115,6 +115,14 @@
 
         }
     }
+}
+
+.header__wrapper-main:hover img {
+    content: url('../img/images/Logo-hover.svg');
+}
+    
+.header__wrapper-main:hover p {
+    color: $main-second-text-color;
 }
 
 .nav {
@@ -155,6 +163,7 @@
             @media (max-width: 480px) {
                 border-bottom: 3px solid rgba(59, 59, 59, 1);
                 margin: 0 auto;
+                padding: 23px 0px;
                 display: block;
             }
         }
@@ -167,11 +176,9 @@
 
             @media (max-width: 480px) {
                 display: block;
-                font-size: 26px;
-                padding-bottom: 23px;
+                font-size: $adap-fs-xs;
                 text-align: left;
                 padding-left: 30px;
-                margin-top: 30px;
                 color: rgba(255, 255, 255, 1);
                 
 
@@ -186,8 +193,9 @@
 }
 
 .nav__list-link:active {
-    border-left: 8px solid rgba(141, 129, 172, 1);               
-     color: $main-text-color;
+    border-left: 8px solid rgba(141, 129, 172, 1);
+    line-height: 53px;               
+    color: $main-text-color;
 }
 
 
@@ -307,7 +315,7 @@
 
         @media (max-width: 480px) {
             padding: 13px 29px;
-            font-size: 18px;
+            font-size: $adap-fs-xxs;
             
         }
     }
@@ -332,14 +340,6 @@
         font-family: MontserratRegular;
     }
 
-}
-
-.header__wrapper-main:hover img {
-    content: url(../img/images/Logo-hover.svg)
-}
-
-.header__wrapper-main:hover p {
-    color: $main-second-text-color;
 }
 
 .active {
