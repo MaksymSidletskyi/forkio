@@ -10,17 +10,15 @@
 .subscription-cards {
     max-width: 1200px;
     margin: auto;
-    display: flex;
-    align-items: center;
+    @include flex-align(center);
     padding: 61px 43px 73px 43px;
     gap: 15px;
 }
 
 .cards-wrapper,
 .cards-wrapper-second {
-    display: flex;
+    @include flex-align(center);
     gap: 15px;
-    align-items: center;
 }
 
 .card-wrapper {
@@ -89,9 +87,7 @@
     }
 
     &__middle {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex-direction(column, center);
     }
 }
 
@@ -123,9 +119,7 @@
     text-transform: uppercase;
     font-size: $fs-xs;
     border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(center, center); 
     margin: auto;
     color: $main-second-text-color;
     cursor: pointer;
